@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  WeatherClothes
+
+  Created by Lev Butkovskiy on 13.06.2020.
+  Copyright © 2020 BlueBeakStd. All rights reserved.
+*/
+
+"LANGUAGE" = "ru";
+
+"WEATHER_TODAY" = "Погода на сегодня";
+"DETAIL_WEATHER_TODAY" = "Подробная Погода на сегодня";
+
+//MARK: ViewControllers Titles
+"VC_HOME_TITLE" = "Главная";
+"VC_RECOMENDATION_TITLE" = "Для Вас";
+"VC_WARDROBE_TITLE" = "Гардероб";
+"VC_TRENDS_TITLE" = "Тренды";
+"VC_PROFILE_TITLE" = "Профиль";
+
+//MARK: Weather descriptions
+"WEATHER_CLOUDS" = "Облачно";
+
+//MARK: Weather conditions
+"WEATHER_WIND" = "Ветер";
+"WEATHER_HUMIDITY" = "Влажность";
+"WEATHER_PRESSURE" = "Давление";
+"WEATHER_VISIBILITY" = "Видимость";

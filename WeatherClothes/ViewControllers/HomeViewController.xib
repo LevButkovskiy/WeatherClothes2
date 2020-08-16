@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WeatherClothes" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="vQh-XB-dhR" id="rit-Vh-PWM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weatherView" destination="tVw-ns-XQg" id="Hzy-Tb-4fg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caf-l5-r2A">
+                    <rect key="frame" x="24" y="60" width="182" height="32"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What to wear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHb-AQ-0C6">
+                    <rect key="frame" x="24" y="274" width="366" height="32"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-XB-dhR">
+                    <rect key="frame" x="16" y="322" width="382" height="516"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="cgi-cn-4Yj"/>
+                        <outlet property="delegate" destination="-1" id="zea-g3-Peu"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3w-a8-6pe">
+                    <rect key="frame" x="348" y="62" width="42" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Detail">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="detailButtonClick" destination="-1" eventType="touchDown" id="Q8Z-kg-zRx"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVw-ns-XQg" customClass="WeatherView" customModule="WeatherClothes" customModuleProvider="target">
+                    <rect key="frame" x="16" y="108" width="382" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="XMF-O3-7Jr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94907766579999997" green="0.98432427639999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vQh-XB-dhR" secondAttribute="bottom" constant="24" id="3iC-L9-Sej"/>
+                <constraint firstItem="FHb-AQ-0C6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="8a6-kL-C5Q"/>
+                <constraint firstItem="Caf-l5-r2A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="LRc-6n-1tV"/>
+                <constraint firstItem="H3w-a8-6pe" firstAttribute="bottom" secondItem="Caf-l5-r2A" secondAttribute="bottom" id="Ltj-EN-zrS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H3w-a8-6pe" secondAttribute="trailing" constant="24" id="O7F-ym-3tI"/>
+                <constraint firstItem="FHb-AQ-0C6" firstAttribute="top" secondItem="tVw-ns-XQg" secondAttribute="bottom" constant="16" id="Oxl-f0-54G"/>
+                <constraint firstItem="tVw-ns-XQg" firstAttribute="top" secondItem="Caf-l5-r2A" secondAttribute="bottom" constant="16" id="Vwb-9J-Ikc"/>
+                <constraint firstItem="Caf-l5-r2A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="WQG-Rd-azs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FHb-AQ-0C6" secondAttribute="trailing" constant="24" id="YHI-9p-m7U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tVw-ns-XQg" secondAttribute="trailing" constant="16" id="ZVf-ub-B3S"/>
+                <constraint firstItem="vQh-XB-dhR" firstAttribute="top" secondItem="FHb-AQ-0C6" secondAttribute="bottom" constant="16" id="avz-vS-ujz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vQh-XB-dhR" secondAttribute="trailing" constant="16" id="dj2-Pc-rAI"/>
+                <constraint firstItem="tVw-ns-XQg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jej-JS-0E6"/>
+                <constraint firstItem="vQh-XB-dhR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uHI-WP-LCR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="140.625"/>
+        </view>
+    </objects>
+</document>
